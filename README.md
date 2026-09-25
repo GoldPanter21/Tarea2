@@ -71,7 +71,7 @@ Esta tabla relaciona los componentes utilizados para construir cada elemento del
 </details>
 
 ### Documentación en Jetpack Compose
-[Documentación de la aplicación en JetpackCompose](android-comppose/README.md)
+[Documentación de la aplicación en JetpackCompose](andoid-compose/README.md)
 <details>
   <summary><b>Clic para ver las Capturas de Pantalla.</b></summary>
   <br>
