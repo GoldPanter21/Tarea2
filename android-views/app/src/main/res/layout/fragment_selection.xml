@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Elementos de Selección"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 1. Casillas de Verificación (Checkboxes) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Casillas de verificación:" android:textStyle="bold"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción estándar" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbIndeterminate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción con estado indeterminado"
+            app:checkedState="indeterminate" />
+
+        <!-- 2. Grupo de Botones de Opción (RadioGroup) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Botones mutuamente excluyentes:" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/rb1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modo A" android:layout_marginEnd="16dp"/>
+            <RadioButton android:id="@+id/rb2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modo B" />
+        </RadioGroup>
+
+        <!-- 3. Interruptor (Switch) -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activar notificaciones"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 4. Deslizadores (Sliders) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deslizador de valor único:" android:textStyle="bold"/>
+        <com.google.android.material.slider.Slider
+            android:id="@+id/singleSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            android:value="50.0" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deslizador de rango:" android:textStyle="bold" android:layout_marginTop="8dp"/>
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/rangeSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:values="@array/initial_slider_values" />
+
+        <!-- 5. Lista Desplegable (Spinner Clásico) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lista desplegable:" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <Spinner
+            android:id="@+id/spinnerSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 6. Selectores de Fecha y Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Elegir Fecha"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTimePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Elegir Hora"
+                style="?attr/materialButtonOutlinedStyle" />
+        </LinearLayout>
+
+        <!-- 7. Chips de Filtro Seleccionables -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chips de filtro:" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin Native"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Docker"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OpenCV"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+</ScrollView>
