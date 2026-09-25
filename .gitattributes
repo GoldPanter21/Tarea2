@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+app_basicas_flutter/windows/** linguist-generated=true
+app_basicas_flutter/linux/** linguist-generated=true
+app_basicas_flutter/ios/** linguist-generated=true
+app_basicas_flutter/macos/** linguist-generated=true
+app_basicas_flutter/web/** linguist-generated=true
